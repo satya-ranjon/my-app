@@ -8,3 +8,7 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+.nav-link{
+  cursor: pointer;
+}

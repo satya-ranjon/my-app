@@ -12,5 +12,4 @@ const mincomponents = () => {
      );
 }
 
-
 export default mincomponents

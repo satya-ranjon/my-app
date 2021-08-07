@@ -1,7 +1,11 @@
 import React from 'react';
+import Navigation from './Navigation';
+
 const header = () =>{
      return(
-          <div></div>
+          <div>
+               <Navigation />
+          </div>
      );
 }
 
