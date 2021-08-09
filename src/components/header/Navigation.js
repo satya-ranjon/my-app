@@ -17,7 +17,7 @@ import {
    const Navigation = (props) => {
      return(
           <div>
-               <Navbar color="dark" dark expand="md">
+               <Navbar color="dark" dark expand="md" className='fixed-top'>
                <div className='container'> 
                     <NavbarBrand herf='/' >
                          Soping SaraBala

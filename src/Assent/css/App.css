@@ -12,3 +12,51 @@
 .nav-link{
   cursor: pointer;
 }
+
+.Menu_box{
+  display: flex;
+  flex-wrap:wrap ;
+}
+.menu_item{
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu_item img{
+  height: 200px;
+  cursor: pointer;
+}
+.read-more-button {
+  color: red;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1400px) {
+  .menu_item{
+    width: 100%;
+  }
+}
+
+.manu_ditels{ 
+  overflow-y: auto;
+  height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 12px;
+}
+
+/* Handle on hover */
+.navManage:hover ::-webkit-scrollbar-thumb {
+  background: #c0c0c094;
+}
+.conatiner{
+  margin-top: 9vh;
+}
