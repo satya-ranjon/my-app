@@ -18,7 +18,7 @@
   flex-wrap:wrap ;
 }
 .menu_item{
-  width: 50%;
+  width: 25%;
   position: relative;
   overflow: hidden;
 }
@@ -33,6 +33,18 @@
 }
 
 @media screen and (max-width: 1400px) {
+  .menu_item{
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .menu_item{
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 520px) {
   .menu_item{
     width: 100%;
   }
@@ -55,8 +67,35 @@
 
 /* Handle on hover */
 .navManage:hover ::-webkit-scrollbar-thumb {
-  background: #c0c0c094;
+  background: #c0c0c0c4;
 }
 .conatiner{
   margin-top: 9vh;
+}
+.navbar-brand a,
+ul li a{
+  color: rgba(255, 255, 255, 0.822);
+  padding: 1vh;
+  text-decoration: none;
+}
+
+ul li a:hover,a.active,a:active{
+  color: red;
+}
+
+.navbar-brand a.active{
+  color: #ffffffcc;
+}
+.text_align{
+  text-align: center;
+}
+
+.footer{
+  position: fixed;
+  bottom: 0;
+  margin: 0 auto;
+  background-color: #282c347e;
+  width: 100%;
+  justify-content: center;
+  padding: 2vh 2vh;
 }

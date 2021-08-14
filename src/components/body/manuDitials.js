@@ -13,7 +13,7 @@ const ManuDitiels = props =>{
                          <CardSubtitle tag="h6" className="mb-2 text-muted">Price: ${props.dishItem.price}</CardSubtitle>
                          <CardText>{props.dishItem.description}</CardText>
                          <h1>Comments All : </h1>
-                         <Comments  Comments={props.dishItem.comments}   />
+                         <Comments  Comments={props.comments}   />
                     </CardBody>
                     </Card>
                     
