@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input, Col } from 'reactstrap';
 
@@ -32,18 +31,18 @@ class Contact extends Component {
     }
 
     render() {
-        document.title = 'New Form'
+        document.title = "Contact";
         return (
             <div className="container">
-                <div className="row  className='p-2' row  className='p-2'-content" style={{ paddingLeft: "20px", textAlign: "left" }}>
+                <div className="row row-content" style={{ paddingLeft: "20px", textAlign: "left" }}>
                     <div className="col-12">
                         <h3>Send us your Feedback</h3>
                     </div>
-                    <div className='p-4 m-4'>
+                    <div className="col-12 col-md-7">
                         <Form onSubmit={this.handleSubmit}>
-                            <FormGroup row  className='p-2'>
-                                <Label htmlFor="firstname" md={4}>First Name</Label>
-                                <Col md={8}>
+                            <FormGroup row>
+                                <Label htmlFor="firstname" md={2}>First Name</Label>
+                                <Col md={10}>
                                     <Input
                                         type="text"
                                         name="firstname"
@@ -53,9 +52,9 @@ class Contact extends Component {
                                     />
                                 </Col>
                             </FormGroup>
-                            <FormGroup row  className='p-2' >
-                                <Label htmlFor="lastname" md={4}>Last Name</Label>
-                                <Col md={8}>
+                            <FormGroup row>
+                                <Label htmlFor="lastname" md={2}>Last Name</Label>
+                                <Col md={10}>
                                     <Input
                                         type="text"
                                         name="lastname"
@@ -65,9 +64,9 @@ class Contact extends Component {
                                     />
                                 </Col>
                             </FormGroup>
-                            <FormGroup row  className='p-2' >
-                                <Label htmlFor="telnum" md={4}>Contact Tel.</Label>
-                                <Col md={8}>
+                            <FormGroup row>
+                                <Label htmlFor="telnum" md={2}>Contact Tel.</Label>
+                                <Col md={10}>
                                     <Input
                                         type="tel"
                                         name="telnum"
@@ -77,9 +76,9 @@ class Contact extends Component {
                                     />
                                 </Col>
                             </FormGroup>
-                            <FormGroup row  className='p-2'>
-                                <Label htmlFor="email" md={4}>Email</Label>
-                                <Col md={8}>
+                            <FormGroup row>
+                                <Label htmlFor="email" md={2}>Email</Label>
+                                <Col md={10}>
                                     <Input
                                         type="email"
                                         name="email"
@@ -89,8 +88,8 @@ class Contact extends Component {
                                     />
                                 </Col>
                             </FormGroup>
-                            <FormGroup row  className='p-2'>
-                                <Col md={{ size: 5,  }}>
+                            <FormGroup row>
+                                <Col md={{ size: 6, offset: 2 }}>
                                     <FormGroup check>
                                         <Label check>
                                             <Input
@@ -104,7 +103,7 @@ class Contact extends Component {
                                         </Label>
                                     </FormGroup>
                                 </Col>
-                                <Col md={{ size: 6,  }}>
+                                <Col md={{ size: 3, offset: 1 }}>
                                     <Input
                                         type="select"
                                         name="contactType"
@@ -116,14 +115,14 @@ class Contact extends Component {
                                     </Input>
                                 </Col>
                             </FormGroup>
-                            <FormGroup row  className='p-2'>
-                                <Label htmlFor="message" md={4}>Your Feedback</Label>
-                                <Col md={8}>
+                            <FormGroup row>
+                                <Label htmlFor="message" md={2}>Your Feedback</Label>
+                                <Col md={10}>
                                     <Input
                                         type="textarea"
                                         name="message"
                                         value={this.state.message}
-                                        row  className='p-2's="12"
+                                        rows="12"
                                         onChange={this.handleInputChange}
                                     >
 
@@ -131,7 +130,7 @@ class Contact extends Component {
                                 </Col>
                             </FormGroup>
                             <FormGroup>
-                                <Col md={{ size: 10, offset: 5 }}>
+                                <Col md={{ size: 10, offset: 2 }}>
                                     <Button type="submit" color="primary">
                                         Send Feedback
                                     </Button>

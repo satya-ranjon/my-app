@@ -1,15 +1,19 @@
 import React,{ Component } from "react"
-import DISHES from "../data/dishes"
-import COMMENTS from "./comments"
 import MenuItem from "./MenuItem"
 import ManuDitiels from "./manuDitials"
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import {connect} from 'react-redux';
+
+const mapStatetoProps = state =>{
+     return{
+          dishes: state.dishes,
+          Comments: state.comments
+     }
+}
 
 
 class Menu extends Component{
      state = {
-          dishes:DISHES,
-          Comments: COMMENTS,
           selectDis: null,
           opnModel:false
      }
@@ -29,7 +33,7 @@ class Menu extends Component{
      }
 
      render(){
-          const menu = this.state.dishes.map(item =>{
+          const menu = this.props.dishes.map(item =>{
                return(
                     <MenuItem dish={item} key={item.id} DisSelect={() => this.selectDisItem(item)} />
                )
@@ -37,8 +41,9 @@ class Menu extends Component{
 
           let diteals = null;
           if(this.state.selectDis != null){
-               const comments = this.state.comment.filter( comment => {
-                    this.state.comment.dishId === this.state.selectDis.id;
+
+               const comments = this.props.Comments.filter( comment => {
+                  return  comment.dishId === this.state.selectDis.id;
                })
                diteals = <ManuDitiels
                dishItem={this.state.selectDis}
@@ -55,13 +60,13 @@ class Menu extends Component{
                               </div>
 
                     </div>
-                    <Modal isOpen={this.state.opnModel}  onClick={this.toggle}>
+                    <Modal isOpen={this.state.opnModel}  >
                     <ModalHeader>Modal title</ModalHeader>
-                    <ModalBody>
+                    <ModalBody >
                     {diteals}
                     </ModalBody>
                     <ModalFooter>
-                         <Button color="secondary">Closd</Button>
+                         <Button onClick={this.toggle} color="secondary">Closd</Button>
                     </ModalFooter>
                     </Modal>
 
@@ -70,4 +75,4 @@ class Menu extends Component{
      }
 }
 
-export default Menu
+export default connect(mapStatetoProps)(Menu);

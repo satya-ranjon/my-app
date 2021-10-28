@@ -32,7 +32,7 @@ import NewForm from '../body/newitem/newForm';
                             <Collapse isOpen={this.state.isNavOpen} navbar>
                                  <Nav className="mr-auto" navbar >
                                       <NavItem>
-                                           <Link className='nav-link' to='/home'>Home</Link>
+                                           <Link  className='nav-link' to='/home'>Home</Link>
                                       </NavItem>
                                       <NavItem>
                                            <Link className='nav-link' to='/new-add'>New Add</Link>

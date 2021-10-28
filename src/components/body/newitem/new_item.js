@@ -29,6 +29,7 @@ class new_item extends Component{
      }
 
      render(){
+          document.title = 'new Item'
           return(
                <div>
                      <div className='container'>

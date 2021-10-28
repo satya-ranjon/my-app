@@ -1,6 +1,7 @@
 import React from 'react';
 import {Card, CardImg, CardText, CardBody,CardTitle,CardSubtitle, Button } from 'reactstrap';
 import Comments from './comments';
+import CommentsForm from './commentsForm';
 
 const ManuDitiels = props =>{
      return(
@@ -13,7 +14,12 @@ const ManuDitiels = props =>{
                          <CardSubtitle tag="h6" className="mb-2 text-muted">Price: ${props.dishItem.price}</CardSubtitle>
                          <CardText>{props.dishItem.description}</CardText>
                          <h1>Comments All : </h1>
+                         <hr/><br/>
+                         <CommentsForm disId={props.dishItem.id} />
+                         <hr/><br/>
                          <Comments  Comments={props.comments}   />
+                         <Comments  disId={props.dishItem.id}   />
+
                     </CardBody>
                     </Card>
                     
